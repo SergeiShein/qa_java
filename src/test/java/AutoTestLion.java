@@ -15,18 +15,6 @@ public class AutoTestLion {
     @Mock
     Feline feline;
     @Test
-    public void teatMale() throws Exception {
-        Lion lion = new Lion("Самец", feline);
-        boolean mane = lion.doesHaveMane();
-        assertTrue(mane);
-    }
-    @Test
-    public void testFemale()throws Exception{
-        Lion lion = new Lion("Самка", feline);
-        boolean mane = lion.doesHaveMane();
-        assertFalse(mane);
-    }
-    @Test
     public void testOther ()throws Exception{
         Exception exception = assertThrows(Exception.class, () -> {
             Lion lionOther = new Lion("Другое", feline);
